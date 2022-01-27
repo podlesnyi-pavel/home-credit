@@ -1,38 +1,97 @@
-$width-item: 332px;
+$width-item-tablet: 358px;
+$width-item: 364px;
+$border-radius: 10px;
 
 .romans-list {
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, $width-item);
-    gap: 64px 143px;
+    grid-template-columns: repeat(auto-fill, 100%);
+    gap: 40px 0;
     margin: 0;
-    padding: 56px 0;
+    padding: 32px 0;
     list-style: none;
+
+    @include mediaOnTablet {
+      grid-template-columns: repeat(auto-fill, $width-item-tablet);
+      gap: 40px 20px;
+      padding: 56px 0;
+    }
+
+    @include mediaOnDesktop {
+      grid-template-columns: repeat(auto-fill, $width-item);
+      gap: 48px 24px;
+    }
+
+    @include mediaOnDesktop-xl {
+      grid-template-columns: repeat(auto-fill, $width-item);
+      gap: 64px 143px;
+    }
   }
 
   &__item {
-    width: $width-item;
-    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
     line-height: 24px;
+    transition: transform $transition-duration-default;
+
+    @include mediaOnTablet {
+      align-items: flex-start;
+      width: $width-item-tablet;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @include mediaOnDesktop {
+      width: $width-item;
+    }
+  }
+
+  &__item-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mediaOnTablet {
+      align-items: flex-start;
+    }
   }
 
   &__img {
     display: block;
-    width: 213px;
-    height: 297px;
+    width: 159px;
+    height: 224px;
+    border-radius: $border-radius;
     object-fit: cover;
+
+    @include mediaOnTablet {
+      width: 213px;
+      height: 297px;
+    }
   }
 
   &__caption {
-    margin: 32px 0 0;
-    font-weight: 500;
-    font-size: 24px;
-    line-height: 32px;
+    margin: 28px 0 0;
+
+    @include mediaOnTablet {
+      margin: 32px 0 0;
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   &__author {
     margin-top: 8px;
+    font-size: 14px;
+    line-height: 24px;
     opacity: 0.5;
+
+    @include mediaOnTablet {
+      margin-top: 8px;
+      font-size: 16px;
+    }
   }
 
   &__text {

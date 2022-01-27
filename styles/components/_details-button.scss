@@ -27,4 +27,14 @@
     border: 1px solid $color-white;
     color: $color-white;
   }
+
+  &--romans {
+    margin-top: 17px;
+    padding: 6px 32px 8px;
+    text-align: center;
+
+    @include mediaOnTablet {
+      font-size: 16px;
+    }
+  }
 }

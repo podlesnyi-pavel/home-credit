@@ -4,6 +4,10 @@
 
   @include mediaOnTablet {
     max-width: 622px;
+
+    &--romans {
+      max-width: none;
+    }
   }
 
   @include mediaOnDesktop {

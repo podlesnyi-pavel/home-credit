@@ -24,6 +24,9 @@
   .container {
     max-width: 622px;
   }
+  .container--romans {
+    max-width: none;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -117,6 +120,18 @@
 .details-button--color--white {
   border: 1px solid #fff;
   color: #fff;
+}
+
+.details-button--romans {
+  margin-top: 17px;
+  padding: 6px 32px 8px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .details-button--romans {
+    font-size: 16px;
+  }
 }
 
 .return-button {
@@ -347,38 +362,137 @@
 .romans-list__list {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (332px)[auto-fill];
-      grid-template-columns: repeat(auto-fill, 332px);
-  gap: 64px 143px;
+  -ms-grid-columns: (100%)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 100%);
+  gap: 40px 0;
   margin: 0;
-  padding: 56px 0;
+  padding: 32px 0;
   list-style: none;
 }
 
+@media (min-width: 768px) {
+  .romans-list__list {
+    -ms-grid-columns: (358px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 358px);
+    gap: 40px 20px;
+    padding: 56px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .romans-list__list {
+    -ms-grid-columns: (364px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 364px);
+    gap: 48px 24px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .romans-list__list {
+    -ms-grid-columns: (364px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 364px);
+    gap: 64px 143px;
+  }
+}
+
 .romans-list__item {
-  width: 332px;
-  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: 14px;
   line-height: 24px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+@media (min-width: 768px) {
+  .romans-list__item {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 358px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .romans-list__item {
+    width: 364px;
+  }
+}
+
+.romans-list__item-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .romans-list__item-inner {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 .romans-list__img {
   display: block;
-  width: 213px;
-  height: 297px;
+  width: 159px;
+  height: 224px;
+  border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
+@media (min-width: 768px) {
+  .romans-list__img {
+    width: 213px;
+    height: 297px;
+  }
+}
+
 .romans-list__caption {
-  margin: 32px 0 0;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
+  margin: 28px 0 0;
+}
+
+@media (min-width: 768px) {
+  .romans-list__caption {
+    margin: 32px 0 0;
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .romans-list__author {
   margin-top: 8px;
+  font-size: 14px;
+  line-height: 24px;
   opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .romans-list__author {
+    margin-top: 8px;
+    font-size: 16px;
+  }
 }
 
 .romans-list__text {
