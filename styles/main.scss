@@ -1,5 +1,6 @@
 @import './utils/fonts';
 @import './utils/variables';
+@import './utils/mixins';
 @import './common/container';
 @import './common/title';
 @import './components/logo';
@@ -14,11 +15,25 @@
 .body {
   font-family: "Stem", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 14px;
+  line-height: 22px;
   color: $color-text;
+
+  @include mediaOnTablet {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @include mediaOnDesktop-xl {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 .main {
-  padding: 16px;
+  padding: 8px;
+
+  @include mediaOnTablet {
+    padding: 16px;
+  }
 }
