@@ -1,0 +1,79 @@
+.wishes {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 92px 0 128px;
+  }
+
+  &__item {
+    display: flex;
+    margin-top: 100px;
+
+    &--mt--68 {
+      margin-top: 68px;
+    }
+  }
+
+  &__descr {
+    max-width: 569px;
+
+    &--mw--593 {
+      max-width: 593px;
+    }
+  }
+
+  &__span {
+    color: $color-main;
+  }
+
+  &__text {
+    margin: 21px 0 0;
+  }
+
+  &__link {
+    display: inline-block;
+    margin-top: 31px;
+    padding: 11px 32px 11px;
+    border: 1px solid $color-main;
+    border-radius: 10px;
+    line-height: 24px;
+    color: $color-text;
+    text-decoration: none;
+    transition: all $transition-duration-default;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $color-main;
+      color: $color-white;
+    }
+  }
+
+  &__img {
+    &--first {
+      width: 518px;
+      height: 472px;
+      margin-left: 169px;
+    }
+
+    &--second {
+      width: 508px;
+      height: 443px;
+      margin-top: 20px;
+      margin-right: 209px;
+    }
+
+    &--third {
+      width: 543px;
+      height: 476px;
+      margin-top: 28px;
+      margin-left: 146px;
+    }
+
+    &--fourth {
+      width: 571px;
+      height: 497px;
+      margin-right: 146px;
+    }
+  }
+}

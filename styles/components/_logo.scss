@@ -1,0 +1,14 @@
+.logo {
+  display: flex;
+
+  &__logo {
+    width: 102px;
+    height: 72px;
+    margin-right: 62px;
+  }
+
+  &__years {
+    width: 63px;
+    height: 32px;
+  }
+}

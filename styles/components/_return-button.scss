@@ -1,0 +1,41 @@
+$width-arrow: 16px;
+$padding-left: calc(#{$width-arrow} + 12px);
+
+.return-button {
+  position: relative;
+  display: block;
+  width: max-content;
+  padding-left: $padding-left;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  line-height: 24px;
+  color: $color-white;
+  text-decoration: none;
+
+  &:hover::after,
+  &:focus::after,
+  &:active::after {
+    width: calc(100% - #{$padding-left});
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: $width-arrow;
+    height: 12px;
+    background: url('../images/return-arrow.svg') center/contain no-repeat ;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: $padding-left;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width $transition-duration-default;
+  }
+}
