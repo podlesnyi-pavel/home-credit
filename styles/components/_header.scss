@@ -1,6 +1,6 @@
 $vertical-padding: 64px;
 
-.promo {
+.header {
   border-radius: 20px 20px 0px 20px;
   background: linear-gradient(140deg,
     rgba(254,110,161,1) 0%,
@@ -8,7 +8,6 @@ $vertical-padding: 64px;
   );
   
   &__inner {
-    position: relative;
     display: flex;
     padding: $vertical-padding 0;
     color: $color-white;
@@ -31,11 +30,8 @@ $vertical-padding: 64px;
   }
 
   &__bg {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 60%;
-    height: calc(100% - #{$vertical-padding});
-    background: url('../../images/promo-bg.svg') center/cover no-repeat;
+    width: 50%;
+    min-height: 100%;
+    background: url('../../images/header-bg.svg') center/contain no-repeat;
   }
 }

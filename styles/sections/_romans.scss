@@ -1,0 +1,41 @@
+$width-item: 332px;
+
+.romans-list {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, $width-item);
+    gap: 64px 143px;
+    margin: 0;
+    padding: 56px 0;
+    list-style: none;
+  }
+
+  &__item {
+    width: $width-item;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__img {
+    display: block;
+    width: 213px;
+    height: 297px;
+    object-fit: cover;
+  }
+
+  &__caption {
+    margin: 32px 0 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &__author {
+    margin-top: 8px;
+    opacity: 0.5;
+  }
+
+  &__text {
+    margin: 14px 0 0;
+  }
+}

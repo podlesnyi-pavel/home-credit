@@ -4,20 +4,32 @@
 @import './common/container';
 @import './common/title';
 @import './components/logo';
+@import './components/details-button';
 @import './components/return-button';
-@import './sections/promo';
+@import './components/header';
 @import './sections/wishes';
+@import './sections/romans';
 
 * {
   box-sizing: border-box;
 }
 
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 .body {
+  padding: 8px;
   font-family: "Stem", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: $color-text;
+
+  @include mediaOnTablet {
+    padding: 16px;
+  }
 
   @include mediaOnTablet {
     font-size: 18px;
@@ -27,13 +39,5 @@
   @include mediaOnDesktop-xl {
     font-size: 20px;
     line-height: 32px;
-  }
-}
-
-.main {
-  padding: 8px;
-
-  @include mediaOnTablet {
-    padding: 16px;
   }
 }
