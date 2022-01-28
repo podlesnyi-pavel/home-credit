@@ -16,7 +16,7 @@
 }
 
 .container {
-  max-width: 100%;
+  max-width: 288px;
   margin: 0 auto;
 }
 
@@ -82,7 +82,13 @@
 .logo__logo {
   width: 102px;
   height: 72px;
-  margin-right: 62px;
+  margin-right: 32px;
+}
+
+@media (min-width: 768px) {
+  .logo__logo {
+    margin-right: 62px;
+  }
 }
 
 .logo__years {
@@ -176,38 +182,113 @@
 }
 
 .header {
-  border-radius: 20px 20px 0px 20px;
+  border-radius: 20px;
   background: linear-gradient(140deg, #fe6ea1 0%, #563c9b 65%);
 }
 
+@media (min-width: 768px) {
+  .header {
+    border-radius: 20px 20px 0px 20px;
+  }
+}
+
 .header__inner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 64px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 56px 0;
   color: #fff;
 }
 
+@media (min-width: 768px) {
+  .header__inner {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 64px 0;
+  }
+}
+
 .header__return-button {
-  margin-top: 40px;
+  margin-top: 22px;
+}
+
+@media (min-width: 768px) {
+  .header__return-button {
+    margin-top: 40px;
+  }
 }
 
 .header__descr {
-  max-width: 40%;
+  width: 100%;
+  max-width: 256px;
+}
+
+@media (min-width: 768px) {
+  .header__descr {
+    max-width: 40%;
+  }
+}
+
+.header__descr--romans {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .header__descr--romans {
+    max-width: 40%;
+    max-width: 683px;
+  }
 }
 
 .header__title {
-  margin-top: 48px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    margin-top: 48px;
+  }
 }
 
 .header__text {
-  margin: 30px 0 0;
+  margin: 16px 0 0;
 }
 
-.header__bg {
-  width: 50%;
-  min-height: 100%;
-  background: url("../../images/header-bg.svg") center/contain no-repeat;
+@media (min-width: 768px) {
+  .header__text {
+    margin: 30px 0 0;
+  }
+}
+
+.header__img {
+  width: 272px;
+  height: 240px;
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .header__img {
+    width: 626px;
+    height: 552px;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__img {
+    position: absolute;
+    right: -50px;
+    bottom: 0;
+    width: 760px;
+    height: 672px;
+  }
 }
 
 .wishes__inner {

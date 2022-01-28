@@ -1,37 +1,102 @@
 $vertical-padding: 64px;
+$vertical-padding-mobile: 56px;
 
 .header {
-  border-radius: 20px 20px 0px 20px;
+  border-radius: 20px;
   background: linear-gradient(140deg,
     rgba(254,110,161,1) 0%,
     rgba(86,60,155,1) 65%
   );
+
+  @include mediaOnTablet {
+    border-radius: 20px 20px 0px 20px;
+  }
   
   &__inner {
+    position: relative;
     display: flex;
-    padding: $vertical-padding 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: $vertical-padding-mobile 0;
     color: $color-white;
+
+    @include mediaOnTablet {
+      justify-content: flex-start;
+      padding: $vertical-padding 0;
+    }
   }
 
   &__return-button {
-    margin-top: 40px;
+    margin-top: 22px;
+
+    @include mediaOnTablet {
+      margin-top: 40px;
+    }
   }
 
   &__descr {
-    max-width: 40%;
+    width: 100%;
+    max-width: 256px;
+
+    @include mediaOnTablet {
+      max-width: 40%;
+    }
+
+    &--romans {
+      width: 100%;
+
+      @include mediaOnTablet {
+        max-width: 40%;
+        max-width: 683px;
+      }
+    }
   }
 
   &__title {
-    margin-top: 48px;
+    margin-top: 30px;
+
+    @include mediaOnTablet {
+      margin-top: 48px;
+    }
   }
 
   &__text {
-    margin: 30px 0 0;
+    margin: 16px 0 0;
+
+    @include mediaOnTablet {
+      margin: 30px 0 0;
+    }
   }
 
-  &__bg {
-    width: 50%;
-    min-height: 100%;
-    background: url('../../images/header-bg.svg') center/contain no-repeat;
+  // &__bg {
+  //   width: 50%;
+  //   min-height: 100%;
+  //   background: url('../../images/header-bg.svg') center/contain no-repeat;
+
+  //   &--romans {
+  //     position: relative;
+  //     right: -20px;
+  //     background: url('../images/romans/romans-header-bg.svg') center/contain no-repeat;
+  //   }
+  // }
+
+  &__img {
+    width: 272px;
+    height: 240px;
+    margin-top: 24px;
+
+    @include mediaOnTablet {
+      width: 626px;
+      height: 552px;
+      margin-top: 0;
+    }
+
+    @include mediaOnDesktop {
+      position: absolute;
+      right: -50px;
+      bottom: 0;
+      width: 760px;
+      height: 672px;
+    }
   }
 }
