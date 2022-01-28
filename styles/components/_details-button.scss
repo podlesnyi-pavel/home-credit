@@ -28,6 +28,36 @@
     color: $color-white;
   }
 
+  &--gradient {
+    position: absolute;
+    bottom: -320px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 202px;
+    margin-top: 0;
+    border: none;
+    background: linear-gradient(140deg,
+    rgba(254,110,161,1) 0%,
+    rgba(86,60,155,1) 65%
+    );
+    color: $color-white;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: linear-gradient(rgba(254,110,161,1));
+      color: $color-text;
+    }
+
+    @include mediaOnTablet {
+      bottom: -270px;
+    }
+
+    @include mediaOnDesktop {
+      bottom: -98px;
+    }
+  }
+
   &--romans {
     margin-top: 17px;
     padding: 6px 32px 8px;

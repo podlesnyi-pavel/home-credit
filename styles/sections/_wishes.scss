@@ -1,4 +1,13 @@
 .wishes {
+  padding: 230px 0 0;
+
+  @include mediaOnTablet {
+    padding: 219px 0 0;
+  }
+  @include mediaOnDesktop {
+    padding: 0;
+  }
+
   &__inner {
     display: flex;
     justify-content: center;
@@ -10,11 +19,8 @@
     }
 
     @include mediaOnDesktop-xl {
-      padding: 92px 0 128px;
-    }
-
-    @include mediaOnDesktop-xl {
       justify-content: row;
+      padding: 92px 0 128px;
     }
   }
 

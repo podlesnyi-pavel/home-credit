@@ -26,6 +26,7 @@
   font-size: 14px;
   line-height: 22px;
   color: $color-text;
+  overflow-x: hidden;
 
   @include mediaOnTablet {
     padding: 16px;
