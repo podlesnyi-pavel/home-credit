@@ -677,8 +677,8 @@
 
 @media (min-width: 768px) {
   .romans-list__list {
-    -ms-grid-columns: (358px)[auto-fill];
-        grid-template-columns: repeat(auto-fill, 358px);
+    -ms-grid-columns: (349px)[auto-fill];
+        grid-template-columns: repeat(auto-fill, 349px);
     gap: 40px 20px;
     padding: 56px 0;
   }
@@ -725,7 +725,7 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
-    width: 358px;
+    width: 349px;
     font-size: 16px;
     line-height: 24px;
   }
